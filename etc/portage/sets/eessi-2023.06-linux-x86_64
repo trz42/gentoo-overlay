@@ -11,7 +11,6 @@ media-fonts/dejavu
 media-fonts/liberation-fonts
 =sys-apps/archspec-0.2.1::eessi
 sys-apps/dbus
-=dev-lua/luaposix-36.1::eessi
 sys-cluster/lmod
 sys-cluster/rdma-core
 =sys-fabric/opa-psm2-11.2.205::eessi
