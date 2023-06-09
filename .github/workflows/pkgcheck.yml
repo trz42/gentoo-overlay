@@ -7,17 +7,13 @@ on:
     paths-ignore:
       - 'README.md'
       - 'scripts/**'
-    inputs:
-      categories:
-        description: 'Categories to check'
-        required: false
-        default: 'sys-apps'
   pull_request:
     branches:
       - main
     paths-ignore:
       - 'README.md'
       - 'scripts/**'
+  workflow_dispatch:
     inputs:
       categories:
         description: 'Categories to check'
