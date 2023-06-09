@@ -7,12 +7,22 @@ on:
     paths-ignore:
       - 'README.md'
       - 'scripts/**'
+    inputs:
+      categories:
+        description: 'Categories to check'
+        required: false
+        default: 'sys-apps'
   pull_request:
     branches:
       - main
     paths-ignore:
       - 'README.md'
       - 'scripts/**'
+    inputs:
+      categories:
+        description: 'Categories to check'
+        required: false
+        default: 'sys-apps'
   schedule:
     - cron: "0 6 * * 1"
 
@@ -28,3 +38,5 @@ jobs:
 
     - name: Run pkgcheck
       uses: pkgcore/pkgcheck-action@5a0413f4494d00e286fb7cf6b8388b6c4578afa4 # No releases, v1 branch
+        with:
+          categories: '${{ github.event.inputs.categories }}'
