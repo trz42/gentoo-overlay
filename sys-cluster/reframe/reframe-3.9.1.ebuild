@@ -8,8 +8,8 @@ DISTUTILS_USE_PEP517=setuptools
 
 PYTHON_COMPAT=( python3_{6..10} )
 
+#DISTUTILS_USE_SETUPTOOLS=pyproject.toml
 inherit distutils-r1
-DISTUTILS_USE_SETUPTOOLS=pyproject.toml
 
 DESCRIPTION="ReFrame is a framework for writing regression tests for HPC systems"
 HOMEPAGE="https://reframe-hpc.readthedocs.io/
