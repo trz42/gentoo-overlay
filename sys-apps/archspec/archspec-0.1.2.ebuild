@@ -11,7 +11,11 @@ inherit distutils-r1
 
 DESCRIPTION="A library to query system architecture"
 HOMEPAGE="https://github.com/archspec/archspec"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+# The tarball from GitHub does not contain the archspec microarchitectures data file,
+# which is part of the archspec-json repository. So, we need to download that tarball as well.
+ARCHSPEC_JSON="${PN}-json-${PV}.tar.gz"
+SRC_URI+=" https://github.com/${PN}/${PN}-json/archive/v${PV}.tar.gz -> ${ARCHSPEC_JSON}"
 
 LICENSE="|| ( Apache-2.0 MIT )"
 SLOT="0"
