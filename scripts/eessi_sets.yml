@@ -7,7 +7,7 @@ eessi_archs:
 #  - macos-x86_64
 
 eessi_sets:
-  - name: eessi-2023.06
+  - name: eessi-2023.09
     packages:
       - name: app-shells/bash-completion
       - name: dev-python/GitPython
