@@ -10,6 +10,9 @@ eessi_sets:
   - name: eessi-2023.09
     packages:
       - name: app-shells/bash-completion
+      - name: dev-python/uri_template
+        version: 1.2.0
+        overlay: eessi
       - name: dev-python/GitPython
       - name: dev-python/keyring
       - name: dev-python/pip
