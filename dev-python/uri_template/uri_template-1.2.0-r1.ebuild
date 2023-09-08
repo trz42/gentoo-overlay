@@ -26,6 +26,7 @@ KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv 
 src_unpack() {
 	# unpack ${MY_P}.tar.gz
 	# Extract the tar.gz into ${PN}-${PV}.
+	mkdir -p "${MY_P}"
 	tar -C "${MY_P}" --strip-components=1 -xzf "${DISTDIR}/${MY_P}.tar.gz" || die
 }
 
